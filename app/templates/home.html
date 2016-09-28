@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h3> List of All Names in Database</h3>
+      <br>
+      <ul>
+        {% for name in name_list %}
+          <li>{{name}}</li>
+        {% endfor %}
+      </ul>
+{% endblock %}
