@@ -37,6 +37,9 @@ def home():
 	nameList = []
 	for row in result:
 		nameList.append(row[0])
+	assert len(nameList) > 0
+	assert 'Jake' in nameList
+	assert 'Sam' not in nameList
 	return render_template('home.html', name_list=nameList)
 
 @app.route('/add')
