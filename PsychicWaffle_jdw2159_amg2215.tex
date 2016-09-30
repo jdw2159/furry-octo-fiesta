@@ -1,0 +1,70 @@
+\documentclass{article} 
+\usepackage{url, graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{textcomp}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+\usepackage{listings} % for code highlighting/formatting
+\usepackage[final]{pdfpages}
+
+\usepackage{color} %defining colors for syntax highlighting
+\definecolor{syntaxBlue}{RGB}{42,0.0,255}
+\definecolor{syntaxGreen}{RGB}{63,127,95}
+\definecolor{syntaxPurple}{RGB}{127,0,85}
+\definecolor{syntaxCyan}{RGB}{0,155,155}
+\definecolor{syntaxGreyBg}{RGB}{220,220,220}
+
+
+\lstset{
+    basicstyle=\small\ttfamily, % Global Code Style
+    tabsize=2, % number of spaces indented when discovering a tab 
+    columns=fixed, % make all characters equal width
+    keepspaces=true, % does not ignore spaces to fit width, convert tabs to spaces
+    showstringspaces=false, % lets spaces in strings appear as real spaces
+    breaklines=true, % wrap lines if they don't fit
+    frame=trbl, % draw a frame at the top, right, left and bottom of the listing
+    frameround=tttt, % make the frame round at all four corners
+    framesep=4pt, % quarter circle size of the round corners
+    numbers=left, % show line numbers at the left
+    numberstyle=\tiny\ttfamily, % style of the line numbers
+    commentstyle=\color{syntaxGreen},
+    keywordstyle=\color{syntaxPurple},
+    stringstyle=\color{syntaxBlue},
+    emph={int,char,float,struct,string},
+    emphstyle=\color{syntaxCyan},
+    backgroundcolor=\color{syntaxGreyBg},
+}
+
+\title{Psychic Waffle \\
+	\textit{Homework 2}}
+\author{
+    Andrew Grant\\
+    \texttt{amg2215@columbia.edu}
+    \and
+    Jake Weissman\\
+    \texttt{jdw2159@columbia.edu}
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{GitHub URL}
+https://github.com/jdw2159/furry-octo-fiesta
+
+\section{System Description}
+For this assignment we developed simple web app that keeps track of users who visit the website and enter their name. One page asks the user what his or her name is and upon submitting it, that information is stored in a database. The other page prints a list of all the people who have visited our site.
+
+\section{Technologies Used / Lessons Learned}
+The application is a simple python flask app. It was rather simple to follow an online guide to set up a very basic flask application. We also both had experience working with Python virtual environments so that part was not especially difficult.
+\par Flask has front end components that made it easy enough to render a couple of templates and display information by iterating through a list. Creating a display for users to input their name was fairly simple and reading that input was also rather straightforward.
+\par Our next objective was to set up a persistent store for the user input. Both of us have experience with PostgreSQL so we were able to spin up a database on our laptop and add a table that has one text column to store a name. There was enough documentation online to figure out how to connect the app to the database, but installing all of the necessary packages was tricky and took some time.
+\par Once all of that was in place, we wrote a few lines of code to read and write to the database and the app was up and running! Once all of that was in place, we added some unit tests using pytest which was very straightforward. Finally, we ran our code through NAME-OF-STATIC-ANALYSIS-TOOL, a python static analysis tool, and ...
+
+\end{document} 
